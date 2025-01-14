@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useFormStatus } from "react-dom";
-import {Loader2} from "lucide-react"
+import { Loader2 } from "lucide-react"
 
 export function SubmitButton() {
   const { pending } = useFormStatus();
