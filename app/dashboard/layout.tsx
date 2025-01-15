@@ -3,6 +3,7 @@ import { requireUser } from "../utils/hooks";
 import Link from "next/link";
 import Logo from "@/public/logo.png"
 import Image from "next/image";
+import { DashboardLinks } from "../components/DashboardLinks";
 
 export default async function DashboardLayout({ children } : { children : ReactNode}) {
   const session = await requireUser();
@@ -18,6 +19,11 @@ export default async function DashboardLayout({ children } : { children : ReactN
                   Invoice<span className="text-blue-600">Platform</span>
                 </p>
               </Link>
+            </div>
+            <div className="flex-1">
+              <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
+                <DashboardLinks />
+              </nav>
             </div>
           </div>
         </div>
